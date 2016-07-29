@@ -1,37 +1,69 @@
-Deprecated
-==========
+apache Cookbook
+===============
+TODO: Enter the cookbook description here.
 
-Use of this repository is deprecated. We recommend using the `chef generate repo` command that comes with [ChefDK](http://downloads.chef.io/chef-dk/).
+e.g.
+This cookbook makes your favorite breakfast sandwich.
 
-Overview
-========
+Requirements
+------------
+TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
 
-Every Chef installation needs a Chef Repository. This is the place where cookbooks, roles, config files and other artifacts for managing systems with Chef will live. We strongly recommend storing this repository in a version control system such as Git and treat it like source code.
+e.g.
+#### packages
+- `toaster` - apache needs toaster to brown your bagel.
 
-While we prefer Git, and make this repository available via GitHub, you are welcome to download a tar or zip archive and use your favorite version control system to manage the code.
+Attributes
+----------
+TODO: List your cookbook attributes here.
 
-Repository Directories
-======================
+e.g.
+#### apache::default
+<table>
+  <tr>
+    <th>Key</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Default</th>
+  </tr>
+  <tr>
+    <td><tt>['apache']['bacon']</tt></td>
+    <td>Boolean</td>
+    <td>whether to include bacon</td>
+    <td><tt>true</tt></td>
+  </tr>
+</table>
 
-This repository contains several directories, and each directory contains a README file that describes what it is for in greater detail, and how to use it for managing your systems with Chef.
+Usage
+-----
+#### apache::default
+TODO: Write usage instructions for each cookbook.
 
-* `cookbooks/` - Cookbooks you download or create.
-* `data_bags/` - Store data bags and items in .json in the repository.
-* `roles/` - Store roles in .rb or .json in the repository.
-* `environments/` - Store environments in .rb or .json in the repository.
+e.g.
+Just include `apache` in your node's `run_list`:
 
-Configuration
-=============
+```json
+{
+  "name":"my_node",
+  "run_list": [
+    "recipe[apache]"
+  ]
+}
+```
 
-The repository contains a knife configuration file.
+Contributing
+------------
+TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
 
-* .chef/knife.rb
+e.g.
+1. Fork the repository on Github
+2. Create a named feature branch (like `add_component_x`)
+3. Write your change
+4. Write tests for your change (if applicable)
+5. Run the tests, ensuring they all pass
+6. Submit a Pull Request using Github
 
-The knife configuration file `.chef/knife.rb` is a repository specific configuration file for knife. If you're using Hosted Chef, you can download one for your organization from the management console. If you're using the Open Source Chef Server, you can generate a new one with `knife configure`. For more information about configuring Knife, see the Knife documentation.
-
-https://docs.chef.io/knife.html
-
-Next Steps
-==========
-
-Read the README file in each of the subdirectories for more information about what goes in those directories.
+License and Authors
+-------------------
+Authors: TODO: List authors
+# chefrepo
